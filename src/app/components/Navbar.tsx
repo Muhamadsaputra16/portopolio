@@ -2,17 +2,31 @@
 
 import { useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
-import { HiMoon, HiSun } from 'react-icons/hi2';
+import {
+  HiHome,
+  HiUser,
+  HiCodeBracket,
+  HiRocketLaunch,
+  HiBriefcase,
+  HiAcademicCap,
+  HiEnvelope,
+  HiMoon,
+  HiSun,
+  HiBars3,
+  HiXMark,
+} from 'react-icons/hi2';
+import { FaGithub, FaLinkedinIn } from 'react-icons/fa6';
+import Image from 'next/image';
 import styles from './styles/Navbar.module.css';
 
 const navItems = [
-  { label: 'Home', href: '#home' },
-  { label: 'About', href: '#about' },
-  { label: 'Skills', href: '#skills' },
-  { label: 'Projects', href: '#projects' },
-  { label: 'Experience', href: '#experience' },
-  { label: 'Education', href: '#education' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Home', href: '#home', icon: <HiHome /> },
+  { label: 'About', href: '#about', icon: <HiUser /> },
+  { label: 'Skills', href: '#skills', icon: <HiCodeBracket /> },
+  { label: 'Projects', href: '#projects', icon: <HiRocketLaunch /> },
+  { label: 'Experience', href: '#experience', icon: <HiBriefcase /> },
+  { label: 'Education', href: '#education', icon: <HiAcademicCap /> },
+  { label: 'Contact', href: '#contact', icon: <HiEnvelope /> },
 ];
 
 export default function Navbar() {
@@ -47,6 +61,14 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (mobileOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+  }, [mobileOpen]);
+
   const handleNavClick = (href: string) => {
     setMobileOpen(false);
     const element = document.querySelector(href);
@@ -63,7 +85,8 @@ export default function Navbar() {
           <span style={{ WebkitTextFillColor: 'var(--primary-500)' }}>.</span>
         </div>
 
-        <ul className={`${styles.navLinks} ${mobileOpen ? styles.open : ''}`}>
+        {/* Desktop Nav Links */}
+        <ul className={styles.desktopNavLinks}>
           {navItems.map((item) => (
             <li key={item.href}>
               <a
@@ -85,29 +108,102 @@ export default function Navbar() {
           )}
         </ul>
 
-        <div className={styles.desktopTheme}>
-          {mounted && (
-            <button
-              className={styles.themeToggle}
-              onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-              aria-label="Toggle theme"
-              style={{ display: 'none' }}
-            >
-              {theme === 'dark' ? <HiSun /> : <HiMoon />}
-            </button>
-          )}
-        </div>
-
+        {/* Mobile Hamburger Button */}
         <button
-          className={`${styles.menuButton} ${mobileOpen ? styles.open : ''}`}
+          className={styles.menuButton}
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
         >
-          <span className={styles.menuLine}></span>
-          <span className={styles.menuLine}></span>
-          <span className={styles.menuLine}></span>
+          {mobileOpen ? <HiXMark /> : <HiBars3 />}
         </button>
 
+        {/* Mobile Sidebar Menu */}
+        <div className={`${styles.mobileSidebar} ${mobileOpen ? styles.open : ''}`}>
+          <div className={styles.sidebarHeader}>
+            <div className={styles.sidebarProfile}>
+              <div className={styles.avatarWrapper}>
+                <Image
+                  src="/images/profile.jpg"
+                  alt="Muhamad Saputra"
+                  width={44}
+                  height={44}
+                  className={styles.sidebarAvatar}
+                  unoptimized
+                />
+              </div>
+              <div className={styles.sidebarUserInfo}>
+                <span className={styles.sidebarName}>Muhamad Saputra</span>
+                <span className={styles.sidebarRole}>Front-End Developer</span>
+              </div>
+            </div>
+            <button
+              className={styles.closeSidebarBtn}
+              onClick={() => setMobileOpen(false)}
+              aria-label="Close menu"
+            >
+              <HiXMark />
+            </button>
+          </div>
+
+          <div className={styles.sidebarNav}>
+            {navItems.map((item) => (
+              <a
+                key={item.href}
+                className={`${styles.sidebarNavItem} ${
+                  activeSection === item.href.replace('#', '') ? styles.activeItem : ''
+                }`}
+                onClick={() => handleNavClick(item.href)}
+              >
+                <span className={styles.sidebarNavIcon}>{item.icon}</span>
+                <span className={styles.sidebarNavText}>{item.label}</span>
+              </a>
+            ))}
+          </div>
+
+          <div className={styles.sidebarFooter}>
+            {mounted && (
+              <button
+                className={styles.sidebarThemeBtn}
+                onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+              >
+                <span className={styles.sidebarThemeIcon}>
+                  {theme === 'dark' ? <HiSun style={{ color: '#f59e0b' }} /> : <HiMoon style={{ color: '#6366f1' }} />}
+                </span>
+                <span>{theme === 'dark' ? 'Light Mode' : 'Dark Mode'}</span>
+              </button>
+            )}
+
+            <div className={styles.sidebarSocials}>
+              <a
+                href="https://github.com/Muhamadsaputra16"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.sidebarSocialIcon}
+                aria-label="GitHub"
+              >
+                <FaGithub />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/muhamad-saputra-854b30265"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.sidebarSocialIcon}
+                aria-label="LinkedIn"
+              >
+                <FaLinkedinIn />
+              </a>
+              <a
+                href="mailto:Muhammadsafutra33@gmail.com"
+                className={styles.sidebarSocialIcon}
+                aria-label="Email"
+              >
+                <HiEnvelope />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Mobile Overlay Background */}
         <div
           className={`${styles.mobileOverlay} ${mobileOpen ? styles.open : ''}`}
           onClick={() => setMobileOpen(false)}
