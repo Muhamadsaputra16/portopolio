@@ -33,7 +33,7 @@ export default function Education() {
             <HiAcademicCap />
           </div>
           <h3 className={styles.universityName}>Universitas Bhayangkara Jakarta Raya</h3>
-          <p className={styles.degree}>S1 Ilmu Komputer / Informatika</p>
+          <p className={styles.degree}>S1 Ilmu Komputer</p>
           <p className={styles.period}>2022 - 2026</p>
 
           <div className={styles.educationDetails}>

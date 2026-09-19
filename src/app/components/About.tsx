@@ -5,10 +5,10 @@ import { HiAcademicCap, HiBriefcase, HiMapPin, HiCodeBracket } from 'react-icons
 import styles from './styles/About.module.css';
 
 const infoCards = [
-  { icon: <HiAcademicCap />, label: 'Pendidikan', value: 'S1 Informatika' },
+  { icon: <HiAcademicCap />, label: 'Pendidikan', value: 'S1 Ilmu Komputer' },
   { icon: <HiBriefcase />, label: 'Fokus', value: 'Front-End Development' },
   { icon: <HiMapPin />, label: 'Lokasi', value: 'Bekasi, Indonesia' },
-  { icon: <HiCodeBracket />, label: 'Status', value: 'Mahasiswa Aktif' },
+  { icon: <HiCodeBracket />, label: 'Status', value: 'Lulus / Fresh Graduate' },
 ];
 
 const stats = [
@@ -46,7 +46,7 @@ export default function About() {
           >
             <div className={styles.aboutImageCard}>
               <p className={styles.aboutText}>
-                Saya adalah mahasiswa <span className={styles.aboutHighlight}>S1 Ilmu Komputer/Informatika</span> di 
+                Saya adalah Fresh Graduate <span className={styles.aboutHighlight}>S1 Ilmu Komputer</span> di 
                 Universitas Bhayangkara Jakarta Raya dengan IPK 3.76. Passionate dalam mengembangkan website modern 
                 dan interaktif menggunakan teknologi terkini.
               </p>
