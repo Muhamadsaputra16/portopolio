@@ -64,6 +64,25 @@ const projects = [
     liveUrl: 'https://muhamadsaputra16.github.io/kopi-senja/',
     githubUrl: 'https://github.com/Muhamadsaputra16/kopi-senja.git',
   },
+  {
+    title: 'Little Lemon Restaurant',
+    type: 'Web Application',
+    description:
+      'Aplikasi web interaktif untuk pemesanan meja restoran Little Lemon. Dilengkapi dengan antarmuka yang ramah pengguna, memudahkan pelanggan untuk melakukan reservasi secara real-time.',
+    image: '/images/little-lemon.png', // Fallback if image not present
+    techStack: ['React', 'JavaScript', 'HTML5', 'CSS3'],
+    features: [
+      'Sistem reservasi meja online',
+      'Desain antarmuka responsif dan modern',
+      'Validasi formulir yang efisien',
+    ],
+    challenge: {
+      title: '⚡ Tantangan & Solusi',
+      text: 'Mengimplementasikan manajemen state yang kompleks untuk formulir reservasi dan ketersediaan waktu.',
+    },
+    liveUrl: 'https://little-lemon-theta.vercel.app/',
+    githubUrl: 'https://github.com/Muhamadsaputra16/Little-Lemon.git',
+  },
 ];
 
 export default function Projects() {
@@ -77,7 +96,7 @@ export default function Projects() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <span className="section-subtitle">🚀 Portofolio</span>
+
           <h2 className="section-title">Featured Projects</h2>
           <p className="section-description">
             Project yang telah saya kerjakan dengan dedikasi dan passion

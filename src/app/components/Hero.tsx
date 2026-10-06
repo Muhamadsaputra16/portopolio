@@ -117,26 +117,6 @@ export default function Hero() {
               priority
               unoptimized
             />
-            <motion.div
-              className={`${styles.floatingElement} ${styles.floatTopRight}`}
-              animate={{ y: [0, -8, 0] }}
-              transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
-            >
-              <div className={styles.floatingIcon}>
-                <HiCodeBracket />
-              </div>
-              Front-End Dev
-            </motion.div>
-            <motion.div
-              className={`${styles.floatingElement} ${styles.floatBottomLeft}`}
-              animate={{ y: [0, -8, 0] }}
-              transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
-            >
-              <div className={styles.floatingIcon}>
-                <HiRocketLaunch />
-              </div>
-              Next.js & React
-            </motion.div>
           </div>
         </motion.div>
       </div>

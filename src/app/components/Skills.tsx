@@ -37,7 +37,7 @@ export default function Skills() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <span className="section-subtitle">💻 Keahlian</span>
+
           <h2 className="section-title">Skills & Technologies</h2>
           <p className="section-description">
             Teknologi, infrastruktur IT, dan tools yang saya kuasai

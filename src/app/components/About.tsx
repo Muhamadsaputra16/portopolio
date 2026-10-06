@@ -29,7 +29,7 @@ export default function About() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <span className="section-subtitle">👤 Tentang Saya</span>
+
           <h2 className="section-title">About Me</h2>
           <p className="section-description">
             Mengenal lebih dekat siapa saya dan apa yang saya lakukan

@@ -19,7 +19,7 @@ export default function Contact() {
     message: string;
   }>({ type: 'idle', message: '' });
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
 
     if (!formData.name.trim() || !formData.email.trim() || !formData.subject.trim() || !formData.message.trim()) {
@@ -30,26 +30,49 @@ export default function Contact() {
       return;
     }
 
-    // Direct mailto link generation to send email via default client
-    const mailtoUrl = `mailto:Muhammadsafutra33@gmail.com?subject=${encodeURIComponent(
-      formData.subject
-    )}&body=${encodeURIComponent(
-      `Nama: ${formData.name}\nEmail: ${formData.email}\n\nPesan:\n${formData.message}`
-    )}`;
+    setStatus({ type: 'idle', message: 'Mengirim pesan...' });
 
-    window.location.href = mailtoUrl;
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
+          access_key: 'ae0da901-4140-464c-a341-352ae2693d3a', 
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        }),
+      });
 
-    setStatus({
-      type: 'success',
-      message: 'Pesan Anda berhasil dikirim! Aplikasi email Anda telah dibuka.',
-    });
+      const result = await response.json();
 
-    setFormData({
-      name: '',
-      email: '',
-      subject: '',
-      message: '',
-    });
+      if (response.status === 200) {
+        setStatus({
+          type: 'success',
+          message: 'Pesan Anda berhasil dikirim! Saya akan segera membalasnya.',
+        });
+        setFormData({
+          name: '',
+          email: '',
+          subject: '',
+          message: '',
+        });
+      } else {
+        setStatus({
+          type: 'error',
+          message: result.message || 'Terjadi kesalahan saat mengirim pesan.',
+        });
+      }
+    } catch (error) {
+      setStatus({
+        type: 'error',
+        message: 'Gagal mengirim pesan. Periksa koneksi internet Anda.',
+      });
+    }
   };
 
   return (
@@ -62,7 +85,7 @@ export default function Contact() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <span className="section-subtitle">📞 Hubungi Saya</span>
+
           <h2 className="section-title">Get In Touch</h2>
           <p className="section-description">
             Mari berdiskusi tentang peluang kerja, project kolaborasi, atau sekadar menyapa!

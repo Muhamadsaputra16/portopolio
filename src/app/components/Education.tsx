@@ -15,7 +15,7 @@ export default function Education() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <span className="section-subtitle">🎓 Pendidikan</span>
+
           <h2 className="section-title">Education</h2>
           <p className="section-description">
             Latar belakang pendidikan formal saya

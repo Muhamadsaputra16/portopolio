@@ -21,6 +21,8 @@
   display: flex;
   flex-direction: column;
   height: 100%;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .certCard::after {
@@ -58,6 +60,26 @@
   color: var(--primary-600);
   margin-bottom: 14px;
   flex-shrink: 0;
+}
+
+.certImageWrapper {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  margin-bottom: 16px;
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  flex-shrink: 0;
+}
+
+.certImage {
+  object-fit: cover;
+  transition: transform var(--transition-base);
+}
+
+.certCard:hover .certImage {
+  transform: scale(1.05);
 }
 
 [data-theme="dark"] .certIcon {
