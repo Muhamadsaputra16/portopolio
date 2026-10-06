@@ -72,6 +72,7 @@
   font-size: 1.02rem;
   color: var(--text-secondary);
   line-height: 1.8;
+  text-align: justify;
 }
 
 .aboutHighlight {
