@@ -77,7 +77,7 @@ export default function About() {
           >
             <p className={styles.aboutText}>
               Perjalanan saya di dunia programming dimulai sejak memasuki perkuliahan di tahun 2022. 
-              Saya fokus pada <span className={styles.aboutHighlight}>Front-End Development</span> dan 
+              Saya fokus pada <span className={styles.aboutHighlight}>Software Development</span> dan 
               terus mengembangkan kemampuan dalam membangun user interface yang menarik dan fungsional.
             </p>
 
