@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { HiArrowDown, HiArrowDownTray, HiCodeBracket, HiRocketLaunch } from 'react-icons/hi2';
-import { FaGithub, FaLinkedinIn, FaEnvelope } from 'react-icons/fa6';
+import { FaGithub, FaLinkedinIn, FaEnvelope, FaInstagram } from 'react-icons/fa6';
 import Image from 'next/image';
 import styles from './styles/Hero.module.css';
 
@@ -34,9 +34,8 @@ export default function Hero() {
           </div>
 
           <p className={styles.heroDescription}>
-            Fresh Graduate S1 Ilmu Komputer Universitas Bhayangkara yang passionate dalam 
-            membangun website modern, responsif, dan user-friendly. Berfokus pada pengembangan 
-            Front-End dengan teknologi terkini.
+            Lulusan S1 Ilmu Komputer Universitas Bhayangkara Jakarta Raya dengan minat pada Software Development. Memiliki kemampuan dalam analisis, problem solving, dan pengembangan aplikasi dengan fokus pada solusi yang efektif, responsif, dan user-friendly.
+
           </p>
 
           <div className={styles.heroButtons}>
@@ -95,6 +94,16 @@ export default function Hero() {
               whileTap={{ scale: 0.95 }}
             >
               <FaEnvelope />
+            </motion.a>
+            <motion.a
+              href="https://www.instagram.com/mhmmdsafutra?stkn=MXRpNnRyOWw2M202eQ%3D%3D&utm_source=qr"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.socialLink}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <FaInstagram />
             </motion.a>
           </div>
         </motion.div>

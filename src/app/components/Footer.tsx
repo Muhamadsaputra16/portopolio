@@ -70,7 +70,7 @@ export default function Footer() {
             <HiEnvelope />
           </a>
           <a
-            href="#"
+            href="https://www.instagram.com/mhmmdsafutra?stkn=MXRpNnRyOWw2M202eQ%3D%3D&utm_source=qr"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.socialIcon}

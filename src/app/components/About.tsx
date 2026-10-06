@@ -6,7 +6,7 @@ import styles from './styles/About.module.css';
 
 const infoCards = [
   { icon: <HiAcademicCap />, label: 'Pendidikan', value: 'S1 Ilmu Komputer' },
-  { icon: <HiBriefcase />, label: 'Fokus', value: 'Front-End Development' },
+  { icon: <HiBriefcase />, label: 'Fokus', value: 'Software Development' },
   { icon: <HiMapPin />, label: 'Lokasi', value: 'Bekasi, Indonesia' },
   { icon: <HiCodeBracket />, label: 'Status', value: 'Lulus / Fresh Graduate' },
 ];

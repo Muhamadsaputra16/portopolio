@@ -3,7 +3,7 @@
 import { useState, FormEvent } from 'react';
 import { motion } from 'framer-motion';
 import { HiEnvelope, HiMapPin, HiPaperAirplane, HiCheckCircle, HiExclamationTriangle } from 'react-icons/hi2';
-import { FaLinkedinIn, FaGithub } from 'react-icons/fa6';
+import { FaLinkedinIn, FaGithub, FaInstagram } from 'react-icons/fa6';
 import styles from './styles/Contact.module.css';
 
 export default function Contact() {
@@ -146,6 +146,16 @@ export default function Contact() {
                   <div className={styles.contactCardValue}>Bekasi, Jawa Barat, Indonesia</div>
                 </div>
               </div>
+
+              <a href="https://www.instagram.com/mhmmdsafutra?stkn=MXRpNnRyOWw2M202eQ%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" className={styles.contactCard}>
+                <div className={styles.contactCardIcon}>
+                  <FaInstagram />
+                </div>
+                <div>
+                  <div className={styles.contactCardLabel}>Instagram</div>
+                  <div className={styles.contactCardValue}>@mhmmdsafutra</div>
+                </div>
+              </a>
             </div>
           </motion.div>
 
