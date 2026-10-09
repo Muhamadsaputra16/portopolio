@@ -11,17 +11,19 @@ import Footer from './components/Footer';
 
 export default function Home() {
   return (
-    <main>
-      <Navbar />
-      <Hero />
-      <About />
-      <Skills />
-      <Projects />
-      <Experience />
-      <Education />
-      <Certificates />
-      <Contact />
-      <Footer />
-    </main>
+    <div style={{ width: '100%', maxWidth: '100vw', overflowX: 'hidden', position: 'relative' }}>
+      <main>
+        <Navbar />
+        <Hero />
+        <About />
+        <Skills />
+        <Projects />
+        <Experience />
+        <Education />
+        <Certificates />
+        <Contact />
+        <Footer />
+      </main>
+    </div>
   );
 }
