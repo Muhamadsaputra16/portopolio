@@ -123,7 +123,7 @@ export default function Navbar() {
             <div className={styles.sidebarProfile}>
               <div className={styles.avatarWrapper}>
                 <Image
-                  src="/images/profile.jpg"
+                  src="/images/profile.png"
                   alt="Muhamad Saputra"
                   width={44}
                   height={44}
