@@ -6,6 +6,12 @@ import {
 } from 'react-icons/fa6';
 import { SiNextdotjs, SiTypescript, SiPostgresql } from 'react-icons/si';
 import { VscVscode } from 'react-icons/vsc';
+import { MdDesignServices } from 'react-icons/md';
+import {
+  PiMicrosoftWordLogoFill,
+  PiMicrosoftExcelLogoFill,
+  PiMicrosoftPowerpointLogoFill,
+} from 'react-icons/pi';
 import { HiWrenchScrewdriver, HiSignal, HiCpuChip, HiServerStack } from 'react-icons/hi2';
 import styles from './styles/Skills.module.css';
 
@@ -23,8 +29,18 @@ const backendSkills = [
   { name: 'PostgreSQL', icon: <SiPostgresql />, level: 'Intermediate', color: '#4169E1' },
   { name: 'Database', icon: <FaDatabase />, level: 'Intermediate', color: '#7C3AED' },
   { name: 'Git', icon: <FaGitAlt />, level: 'Intermediate', color: '#F05032' },
-  { name: 'Figma', icon: <FaFigma />, level: 'Basic', color: '#F24E1E' },
   { name: 'VS Code', icon: <VscVscode />, level: 'Advanced', color: '#007ACC' },
+];
+
+const designSkills = [
+  { name: 'UI/UX', icon: <MdDesignServices />, level: 'Intermediate', color: '#EC4899' },
+  { name: 'Figma', icon: <FaFigma />, level: 'Intermediate', color: '#F24E1E' },
+];
+
+const officeSkills = [
+  { name: 'Microsoft Word', icon: <PiMicrosoftWordLogoFill />, level: 'Advanced', color: '#2B579A' },
+  { name: 'Microsoft Excel', icon: <PiMicrosoftExcelLogoFill />, level: 'Intermediate', color: '#217346' },
+  { name: 'PowerPoint', icon: <PiMicrosoftPowerpointLogoFill />, level: 'Advanced', color: '#D24726' },
 ];
 
 const itSkills = [
@@ -37,6 +53,8 @@ const itSkills = [
 const categories = [
   { label: 'Frontend', skills: frontendSkills },
   { label: 'Backend & Tools', skills: backendSkills },
+  { label: 'UI/UX & Design', skills: designSkills },
+  { label: 'Microsoft Office', skills: officeSkills },
   { label: 'IT Support', skills: itSkills },
 ];
 
