@@ -3,8 +3,8 @@ import './globals.css';
 import ThemeProvider from './components/ThemeProvider';
 
 export const metadata: Metadata = {
-  title: 'Muhamad Saputra | Front-End Developer',
-  description: 'Portfolio website of Muhamad Saputra, a passionate Front-End Developer from Bekasi, Indonesia.',
+  title: 'Muhamad Saputra | Web Developer',
+  description: 'Portfolio website of Muhamad Saputra, a passionate Web Developer from Bekasi, Indonesia.',
 };
 
 export const viewport: Viewport = {

@@ -101,7 +101,7 @@ export default function Contact() {
             transition={{ duration: 0.6, delay: 0.1 }}
           >
             <p className={styles.contactIntro}>
-              Saat ini saya terbuka untuk peluang baru di bidang Front-End Development, 
+              Saat ini saya terbuka untuk peluang baru di bidang Web Development, 
               baik itu freelance, part-time, maupun internship. Jika Anda memiliki pertanyaan 
               atau penawaran, jangan ragu untuk menghubungi saya melalui kontak di bawah ini.
             </p>

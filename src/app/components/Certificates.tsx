@@ -7,6 +7,16 @@ import styles from './styles/Certificates.module.css';
 
 const certificates = [
   {
+    title: 'Coding Camp: Intro to Software Engineering',
+    issuer: 'RevoU',
+    icon: <HiCodeBracket />,
+    description:
+      'Sertifikasi kelulusan program Coding Camp dari RevoU yang mempelajari dasar-dasar Software Engineering, ekosistem web development, dan logika pemrograman perangkat lunak.',
+    badge: 'Course Certificate',
+    link: '/certificates/revou-se.png',
+    image: '/certificates/revou-se.png',
+  },
+  {
     title: 'IT Support Professional Certificate',
     issuer: 'Google / Coursera',
     icon: <HiCodeBracket />,

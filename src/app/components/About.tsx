@@ -15,7 +15,7 @@ import styles from './styles/About.module.css';
 const stats = [
   { number: '3.76', label: 'IPK Akhir' },
   { number: '5+', label: 'Projects' },
-  { number: '3+', label: 'Sertifikat' },
+  { number: '8', label: 'Sertifikat' },
   { number: '1+', label: 'Magang IT' },
 ];
 
@@ -115,7 +115,7 @@ export default function About() {
               </p>
 
               <p className={styles.aboutText}>
-                Perjalanan saya dalam dunia programming berfokus pada <span className={styles.aboutHighlight}>Fullstack & Front-End Development</span>. Saya terbiasa memanfaatkan ekosistem modern seperti React, Next.js, TypeScript, dan CSS modern untuk menciptakan antarmuka yang elegan serta logika sistem yang terstruktur.
+                Perjalanan saya dalam dunia programming berfokus pada <span className={styles.aboutHighlight}>Web Development</span>. Saya terbiasa memanfaatkan ekosistem modern seperti React, Next.js, TypeScript, dan CSS modern untuk menciptakan antarmuka yang elegan serta logika sistem yang terstruktur.
               </p>
 
               <p className={styles.aboutText}>

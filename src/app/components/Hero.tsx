@@ -7,7 +7,7 @@ import { FaGithub, FaLinkedinIn, FaEnvelope, FaInstagram } from 'react-icons/fa6
 import Image from 'next/image';
 import styles from './styles/Hero.module.css';
 
-const ROLES = ['Front-End Developer', 'UI/UX Enthusiast', 'Problem Solver', 'Tech Enthusiast'];
+const ROLES = ['Web Developer', 'UI/UX Enthusiast', 'Problem Solver', 'Tech Enthusiast'];
 
 const PARTICLES = Array.from({ length: 18 }, (_, i) => ({
   id: i,
