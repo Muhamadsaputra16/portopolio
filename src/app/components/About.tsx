@@ -109,13 +109,6 @@ export default function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.2 }}
           >
-            <div className={styles.contentHeader}>
-              <h3 className={styles.greetingTitle}>
-                Halo, Saya <span className={styles.highlightName}>Muhamad Saputra</span>
-              </h3>
-              <p className={styles.roleSub}>Software Developer & Tech Enthusiast</p>
-            </div>
-
             <div className={styles.bioTextContainer}>
               <p className={styles.aboutText}>
                 Saya adalah lulusan <span className={styles.aboutHighlight}>S1 Ilmu Komputer</span> di Universitas Bhayangkara Jakarta Raya dengan predikat kelulusan IPK 3.76. Memiliki antusiasme tinggi dalam merancang dan mengembangkan aplikasi web modern yang interaktif, responsif, dan berorientasi pada kenyamanan pengguna.

@@ -47,6 +47,13 @@
   box-shadow: var(--shadow-md);
 }
 
+/* Ensure inner text container can shrink */
+.contactCard > div:last-child {
+  min-width: 0;
+  flex: 1;
+  overflow: hidden;
+}
+
 .contactCardIcon {
   width: 48px;
   height: 48px;
@@ -81,6 +88,9 @@
   font-size: 0.95rem;
   font-weight: 600;
   color: var(--text-primary);
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  min-width: 0;
 }
 
 /* Form */
@@ -240,6 +250,28 @@
   }
 
   .contactForm {
-    padding: 24px;
+    padding: 20px 16px;
+  }
+
+  .contactCard {
+    padding: 14px;
+    gap: 12px;
+  }
+
+  .contactCardValue {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .contactGrid {
+    gap: 28px;
+  }
+
+  .contactCardIcon {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+    flex-shrink: 0;
   }
 }
