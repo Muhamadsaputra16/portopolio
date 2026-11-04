@@ -1,30 +1,40 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { HiCodeBracket, HiAcademicCap, HiSparkles, HiLanguage, HiShieldCheck } from 'react-icons/hi2';
+import { HiCodeBracket, HiAcademicCap, HiSparkles, HiShieldCheck, HiWrenchScrewdriver } from 'react-icons/hi2';
 import Image from 'next/image';
 import styles from './styles/Certificates.module.css';
 
 const certificates = [
   {
-    title: 'Coding Camp: Intro to Software Engineering',
-    issuer: 'RevoU',
-    icon: <HiCodeBracket />,
-    description:
-      'Sertifikasi kelulusan program Coding Camp dari RevoU yang mempelajari dasar-dasar Software Engineering, ekosistem web development, dan logika pemrograman perangkat lunak.',
-    badge: 'Course Certificate',
-    link: '/certificates/revou-se.png',
-    image: '/certificates/revou-se.png',
-  },
-  {
-    title: 'IT Support Professional Certificate',
+    title: 'Google IT Support Professional Certificate',
     issuer: 'Google / Coursera',
-    icon: <HiCodeBracket />,
+    icon: <HiWrenchScrewdriver />,
     description:
-      'Sertifikasi profesional dari Google yang mencakup dasar dukungan teknis, jaringan komputer, sistem operasi, administrasi sistem, dan keamanan IT.',
+      'Sertifikasi profesional kredensial Google yang memvalidasi 5 pilar kompetensi IT: Technical Support Fundamentals, Computer Networking, Operating Systems (Windows & Linux), System Administration & IT Infrastructure Services, dan IT Security.',
     badge: 'Professional Certificate',
     link: '/certificates/google-it-support.pdf',
     image: '/certificates/google-it-support.png',
+  },
+  {
+    title: 'Cybersecurity Essentials',
+    issuer: 'Cisco Networking Academy / Universitas Bhayangkara Jakarta Raya',
+    icon: <HiShieldCheck />,
+    description:
+      'Sertifikasi kompetensi bidang keamanan siber dan infrastruktur jaringan dari Cisco, meliputi mitigasi ancaman siber, integritas data, kontrol akses, enkripsi, serta strategi mitigasi dan perlindungan sistem IT.',
+    badge: 'Cisco Certificate',
+    link: '/certificates/cisco-essentials.pdf',
+    image: '/certificates/cisco-essentials.png',
+  },
+  {
+    title: 'Introduction to Cybersecurity',
+    issuer: 'Cisco Networking Academy / Universitas Bhayangkara Jakarta Raya',
+    icon: <HiShieldCheck />,
+    description:
+      'Sertifikasi dasar keamanan siber dari Cisco mengenai proteksi data pribadi, analisis jenis-jenis cyber threat, konsep keamanan digital, dan integritas sistem informasi.',
+    badge: 'Cisco Certificate',
+    link: '/certificates/cisco-intro.pdf',
+    image: '/certificates/cisco-intro.png',
   },
   {
     title: 'Meta Front-End Developer Professional Certificate',
@@ -37,6 +47,16 @@ const certificates = [
     image: '/certificates/meta-frontend.png',
   },
   {
+    title: 'Coding Camp: Intro to Software Engineering',
+    issuer: 'RevoU',
+    icon: <HiCodeBracket />,
+    description:
+      'Sertifikasi kelulusan program Coding Camp dari RevoU yang mempelajari dasar-dasar Software Engineering, ekosistem web development, dan logika pemrograman perangkat lunak.',
+    badge: 'Course Certificate',
+    link: '/certificates/revou-se.png',
+    image: '/certificates/revou-se.png',
+  },
+  {
     title: 'Bimbingan Teknis Skema Pengembang Web Pratama (PWP)',
     issuer: 'Fakultas Ilmu Komputer - Universitas Bhayangkara Jakarta Raya',
     icon: <HiCodeBracket />,
@@ -45,26 +65,6 @@ const certificates = [
     badge: 'Bimtek Kompetensi',
     link: '/certificates/bimtek-pwp.pdf',
     image: '/certificates/bimtek-pwp.png',
-  },
-  {
-    title: 'Cybersecurity Essentials',
-    issuer: 'Cisco Networking Academy / Universitas Bhayangkara Jakarta Raya',
-    icon: <HiShieldCheck />,
-    description:
-      'Sertifikasi kompetensi bidang keamanan siber yang meliputi dasar-dasar privasi data, kontrol akses, enkripsi, serta strategi mitigasi dan perlindungan jaringan.',
-    badge: 'Cisco Certificate',
-    link: '/certificates/cisco-essentials.pdf',
-    image: '/certificates/cisco-essentials.png',
-  },
-  {
-    title: 'Introduction to Cybersecurity',
-    issuer: 'Cisco Networking Academy / Universitas Bhayangkara Jakarta Raya',
-    icon: <HiShieldCheck />,
-    description:
-      'Sertifikasi dasar keamanan siber mengenai proteksi data pribadi, analisis jenis-jenis cyber threat, konsep keamanan digital, dan integritas sistem informasi.',
-    badge: 'Cisco Certificate',
-    link: '/certificates/cisco-intro.pdf',
-    image: '/certificates/cisco-intro.png',
   },
   {
     title: 'Free Class: Belajar Coding dari Nol untuk Pemula',

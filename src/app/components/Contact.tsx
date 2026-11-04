@@ -101,9 +101,9 @@ export default function Contact() {
             transition={{ duration: 0.6, delay: 0.1 }}
           >
             <p className={styles.contactIntro}>
-              Saat ini saya terbuka untuk peluang baru di bidang Web Development, 
-              baik itu freelance, part-time, maupun internship. Jika Anda memiliki pertanyaan 
-              atau penawaran, jangan ragu untuk menghubungi saya melalui kontak di bawah ini.
+              Saat ini saya terbuka untuk peluang karir di bidang IT Support Specialist, Helpdesk Engineer, System Administrator, maupun Web Development. Jika Anda memerlukan tenaga teknis yang berdedikasi tinggi dan siap menyelesaikan kendala IT dengan cepat, jangan ragu untuk menghubungi saya melalui kontak di bawah ini.
+
+
             </p>
 
             <div className={styles.contactCards}>

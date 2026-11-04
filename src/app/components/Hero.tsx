@@ -7,7 +7,7 @@ import { FaGithub, FaLinkedinIn, FaEnvelope, FaInstagram } from 'react-icons/fa6
 import Image from 'next/image';
 import styles from './styles/Hero.module.css';
 
-const ROLES = ['Web Developer', 'UI/UX Enthusiast', 'Problem Solver', 'Tech Enthusiast'];
+const ROLES = ['IT Support Specialist', 'Web Developer', 'System & Network Support', 'Tech Enthusiast'];
 
 const PARTICLES = Array.from({ length: 18 }, (_, i) => ({
   id: i,
@@ -190,7 +190,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7 }}
           >
-            Lulusan S1 Ilmu Komputer Universitas Bhayangkara Jakarta Raya dengan minat pada Software Development. Memiliki kemampuan dalam analisis, problem solving, dan pengembangan aplikasi dengan fokus pada solusi yang efektif, responsif, dan user-friendly.
+            Lulusan S1 Ilmu Komputer Universitas Bhayangkara Jakarta Raya dengan keahlian ganda di bidang IT Support & Web Development. Berpengalaman dalam troubleshooting hardware/software, administrasi sistem & jaringan komputer, serta siap memberikan solusi teknologi yang handal, efisien, dan responsif.
           </motion.p>
 
           {/* Stat chips */}
@@ -201,9 +201,10 @@ export default function Hero() {
             transition={{ delay: 0.8 }}
           >
             {[
-              { num: '3+', label: 'Projects' },
-              { num: '2+', label: 'Years Exp' },
-              { num: '5+', label: 'Technologies' },
+              { num: 'Google', label: 'Certified IT' },
+              { num: 'PT Pos', label: 'Magang IT' },
+              { num: '5+', label: 'Projects' },
+              { num: '8', label: 'Certificates' },
             ].map((s) => (
               <div key={s.label} className={styles.statChip}>
                 <span className={styles.statNum}>{s.num}</span>

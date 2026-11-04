@@ -133,7 +133,7 @@ export default function Navbar() {
               </div>
               <div className={styles.sidebarUserInfo}>
                 <span className={styles.sidebarName}>Muhamad Saputra</span>
-                <span className={styles.sidebarRole}>Web Developer</span>
+                <span className={styles.sidebarRole}>IT Support & Web Developer</span>
               </div>
             </div>
             <button

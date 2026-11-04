@@ -7,19 +7,29 @@ import styles from './styles/Experience.module.css';
 const experiences = [
   {
     role: 'IT Support Intern',
-    company: 'PT Pos Indonesia (Persero) - Kota Bekasi',
+    company: 'PT Pos Indonesia (Persero) - Kantor Cabang Utama Bekasi',
     period: 'Maret 2025 - April 2025',
     description:
-      'Mengikuti program magang sebagai IT Support di kantor PT Pos Indonesia wilayah Kota Bekasi. Bertanggung jawab dalam mendukung operasional IT harian dan troubleshooting perangkat.',
+      'Bertanggung jawab dalam memastikan kelancaran operasional infrastruktur IT harian, pemeliharaan perangkat keras & lunak, penanganan stabilitas jaringan lokal, serta memberikan dukungan teknis (helpdesk) cepat tanggap bagi seluruh staf divisi.',
     responsibilities: [
-      'Melakukan troubleshooting hardware dan software pada perangkat komputer kantor',
-      'Mengelola jaringan lokal (LAN) dan memastikan konektivitas berjalan stabil',
-      'Memberikan dukungan teknis kepada karyawan terkait permasalahan IT',
-      'Melakukan instalasi dan konfigurasi sistem operasi serta aplikasi pendukung',
-      'Mendokumentasikan inventaris perangkat IT dan laporan perbaikan',
-      'Membantu pengelolaan sistem keamanan dan backup data',
+      'Melakukan diagnostik, troubleshooting, dan perbaikan perangkat keras (PC Desktop, Laptop, Printer Thermal & Laserjet, Scanner) untuk 50+ unit workstation.',
+      'Mengelola dan memelihara stabilitas jaringan lokal (LAN/WLAN), konfigurasi IP Address (Static/DHCP), penanganan crimping kabel UTP RJ-45, serta switch/router.',
+      'Memberikan layanan technical support & helpdesk (on-site & remote support via RDP/AnyDesk) untuk menyelesaikan kendala teknis pengguna dengan response time cepat.',
+      'Melakukan instalasi, konfigurasi, dan standardisasi sistem operasi (Windows 10/11) serta aplikasi operasional kantor, antivirus, dan driver pendukung.',
+      'Membantu administrasi user domain pada Active Directory, pengelolaan hak akses printer sharing, dan keamanan folder bersama.',
+      'Melakukan pencatatan inventarisasi aset perangkat IT kantor, pembuatan logbook tiket perbaikan teknis, dan pelaksanaan prosedur rutin backup data penting.',
+
     ],
-    techStack: ['Windows Server', 'Networking', 'Hardware Troubleshooting', 'Microsoft Office', 'Active Directory'],
+    techStack: [
+      'Hardware Diagnostics',
+      'LAN / TCP-IP Networking',
+      'Windows 10/11 & Server',
+      'Active Directory',
+      'Printer & Peripherals',
+      'Remote Desktop (RDP)',
+      'Data Backup & Recovery',
+      'Ticketing Support',
+    ],
   },
 ];
 

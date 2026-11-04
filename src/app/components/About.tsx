@@ -9,14 +9,15 @@ import {
   HiSparkles,
   HiRocketLaunch,
   HiEnvelope,
+  HiWrenchScrewdriver,
 } from 'react-icons/hi2';
 import styles from './styles/About.module.css';
 
 const stats = [
   { number: '3.76', label: 'IPK Akhir' },
-  { number: '5+', label: 'Projects' },
+  { number: 'Google', label: 'Certified IT' },
   { number: '8', label: 'Sertifikat' },
-  { number: '1+', label: 'Magang IT' },
+  { number: 'PT Pos', label: 'Magang IT Support' },
 ];
 
 export default function About() {
@@ -91,11 +92,11 @@ export default function About() {
                 transition={{ duration: 0.5, delay: 0.45 }}
               >
                 <div className={styles.badgeIconWrapper}>
-                  <HiSparkles className={styles.badgeIcon} />
+                  <HiWrenchScrewdriver className={styles.badgeIcon} />
                 </div>
                 <div>
-                  <div className={styles.badgeTitle}>Fresh Graduate</div>
-                  <div className={styles.badgeSubtitle}>Univ. Bhayangkara Jaya</div>
+                  <div className={styles.badgeTitle}>Google Certified</div>
+                  <div className={styles.badgeSubtitle}>IT Support Professional</div>
                 </div>
               </motion.div>
             </div>
@@ -111,15 +112,19 @@ export default function About() {
           >
             <div className={styles.bioTextContainer}>
               <p className={styles.aboutText}>
-                Saya adalah lulusan <span className={styles.aboutHighlight}>S1 Ilmu Komputer</span> di Universitas Bhayangkara Jakarta Raya dengan predikat kelulusan IPK 3.76. Memiliki antusiasme tinggi dalam merancang dan mengembangkan aplikasi web modern yang interaktif, responsif, dan berorientasi pada kenyamanan pengguna.
+                Saya adalah lulusan <span className={styles.aboutHighlight}>S1 Ilmu Komputer</span> dari Universitas Bhayangkara Jakarta Raya dengan predikat kelulusan IPK 3.76. Memiliki latar belakang teknis yang kuat di bidang <span className={styles.aboutHighlight}>IT Support</span> dan <span className={styles.aboutHighlight}>Web Development</span>, memadukan keahlian pemecahan masalah hardware/jaringan dengan pengembangan aplikasi modern.
               </p>
 
               <p className={styles.aboutText}>
-                Perjalanan saya dalam dunia programming berfokus pada <span className={styles.aboutHighlight}>Web Development</span>. Saya terbiasa memanfaatkan ekosistem modern seperti React, Next.js, TypeScript, dan CSS modern untuk menciptakan antarmuka yang elegan serta logika sistem yang terstruktur.
+                Di bidang infrastruktur IT, saya memegang sertifikasi profesional kredensial global <span className={styles.aboutHighlight}>Google IT Support Professional</span> dan <span className={styles.aboutHighlight}>Cisco Cybersecurity</span>. Terbiasa menangani diagnostik & perbaikan hardware/software, instalasi sistem operasi (Windows & Linux), konfigurasi jaringan komputer (LAN, TCP/IP, Router/Switch, DHCP/DNS), Active Directory, hingga pemeliharaan preventif perangkat.
               </p>
 
               <p className={styles.aboutText}>
-                Selain perkuliahan, saya memperkaya wawasan profesional melalui pengalaman <span className={styles.aboutHighlight}>magang di PT Pos Indonesia (Persero)</span> sebagai IT Support Intern, di mana saya mengasah kemampuan problem solving, troubleshooting perangkat & jaringan, serta kolaborasi dalam lingkungan kerja nyata.
+                Pengalaman praktis saya teruji nyata saat <span className={styles.aboutHighlight}>magang di PT Pos Indonesia (Persero)</span> sebagai IT Support Intern. Saya bertanggung jawab mendukung operasional harian 50+ unit workstation, memelihara stabilitas jaringan kantor, menangani printer & periferal, serta memberikan technical helpdesk cepat tanggap bagi seluruh staf divisi.
+              </p>
+
+              <p className={styles.aboutText}>
+                Selain itu, saya juga aktif mengembangkan solusi digital melalui <span className={styles.aboutHighlight}>Web Development</span> menggunakan ekosistem modern seperti React, Next.js, dan TypeScript untuk menciptakan sistem yang efisien, responsif, dan user-friendly.
               </p>
             </div>
 
@@ -132,6 +137,10 @@ export default function About() {
               <div className={styles.quickChip}>
                 <HiBriefcase className={styles.chipIcon} />
                 <span>Ready for Work</span>
+              </div>
+              <div className={styles.quickChip}>
+                <HiWrenchScrewdriver className={styles.chipIcon} />
+                <span>IT Support & Web Dev</span>
               </div>
               <div className={styles.quickChip}>
                 <HiAcademicCap className={styles.chipIcon} />

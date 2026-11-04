@@ -2,7 +2,8 @@
 
 import { motion } from 'framer-motion';
 import {
-  FaHtml5, FaCss3Alt, FaJs, FaReact, FaGitAlt, FaFigma, FaDatabase, FaNodeJs
+  FaHtml5, FaCss3Alt, FaJs, FaReact, FaGitAlt, FaFigma, FaDatabase, FaNodeJs,
+  FaWindows, FaLinux, FaNetworkWired, FaServer, FaHeadset
 } from 'react-icons/fa6';
 import { SiNextdotjs, SiTypescript, SiPostgresql } from 'react-icons/si';
 import { VscVscode } from 'react-icons/vsc';
@@ -12,8 +13,31 @@ import {
   PiMicrosoftExcelLogoFill,
   PiMicrosoftPowerpointLogoFill,
 } from 'react-icons/pi';
-import { HiWrenchScrewdriver, HiSignal, HiCpuChip, HiServerStack } from 'react-icons/hi2';
+import {
+  HiWrenchScrewdriver, HiSignal, HiCpuChip, HiServerStack,
+  HiShieldCheck, HiComputerDesktop, HiCommandLine, HiPrinter, HiArrowPath
+} from 'react-icons/hi2';
 import styles from './styles/Skills.module.css';
+
+const itSupportSkills = [
+  { name: 'Technical Support & Helpdesk', icon: <FaHeadset />, level: 'Advanced', color: '#7C3AED' },
+  { name: 'Hardware Diagnostics & Repair', icon: <HiWrenchScrewdriver />, level: 'Advanced', color: '#EF4444' },
+  { name: 'PC Assembly & Maintenance', icon: <HiCpuChip />, level: 'Advanced', color: '#10B981' },
+  { name: 'Windows 10/11 & Server', icon: <FaWindows />, level: 'Advanced', color: '#0078D4' },
+  { name: 'Linux / Ubuntu', icon: <FaLinux />, level: 'Intermediate', color: '#FCC624' },
+  { name: 'Remote Desktop (RDP / AnyDesk)', icon: <HiComputerDesktop />, level: 'Advanced', color: '#0284C7' },
+  { name: 'Printer & Peripherals Setup', icon: <HiPrinter />, level: 'Advanced', color: '#6366F1' },
+  { name: 'Data Backup & Recovery', icon: <HiArrowPath />, level: 'Intermediate', color: '#14B8A6' },
+];
+
+const networkSecuritySkills = [
+  { name: 'Network Troubleshooting', icon: <HiSignal />, level: 'Advanced', color: '#0EA5E9' },
+  { name: 'LAN / WAN & TCP/IP Setup', icon: <HiServerStack />, level: 'Advanced', color: '#F59E0B' },
+  { name: 'Routing, Switching & Cabling (RJ-45)', icon: <FaNetworkWired />, level: 'Advanced', color: '#3B82F6' },
+  { name: 'Active Directory & Domain Join', icon: <FaServer />, level: 'Intermediate', color: '#8B5CF6' },
+  { name: 'Cybersecurity & Threat Mitigation', icon: <HiShieldCheck />, level: 'Intermediate', color: '#10B981' },
+  { name: 'Command Line / PowerShell', icon: <HiCommandLine />, level: 'Intermediate', color: '#64748B' },
+];
 
 const frontendSkills = [
   { name: 'HTML5', icon: <FaHtml5 />, level: 'Advanced', color: '#E34F26' },
@@ -27,13 +51,13 @@ const frontendSkills = [
 const backendSkills = [
   { name: 'Node.js', icon: <FaNodeJs />, level: 'Intermediate', color: '#339933' },
   { name: 'PostgreSQL', icon: <SiPostgresql />, level: 'Intermediate', color: '#4169E1' },
-  { name: 'Database', icon: <FaDatabase />, level: 'Intermediate', color: '#7C3AED' },
-  { name: 'Git', icon: <FaGitAlt />, level: 'Intermediate', color: '#F05032' },
+  { name: 'Database Management', icon: <FaDatabase />, level: 'Intermediate', color: '#7C3AED' },
+  { name: 'Git & GitHub', icon: <FaGitAlt />, level: 'Intermediate', color: '#F05032' },
   { name: 'VS Code', icon: <VscVscode />, level: 'Advanced', color: '#007ACC' },
 ];
 
 const designSkills = [
-  { name: 'UI/UX', icon: <MdDesignServices />, level: 'Intermediate', color: '#EC4899' },
+  { name: 'UI/UX Design', icon: <MdDesignServices />, level: 'Intermediate', color: '#EC4899' },
   { name: 'Figma', icon: <FaFigma />, level: 'Intermediate', color: '#F24E1E' },
 ];
 
@@ -43,19 +67,13 @@ const officeSkills = [
   { name: 'PowerPoint', icon: <PiMicrosoftPowerpointLogoFill />, level: 'Advanced', color: '#D24726' },
 ];
 
-const itSkills = [
-  { name: 'Technical Support', icon: <HiWrenchScrewdriver />, level: 'Intermediate', color: '#7C3AED' },
-  { name: 'Network Troubleshooting', icon: <HiSignal />, level: 'Intermediate', color: '#0EA5E9' },
-  { name: 'Hardware Installation', icon: <HiCpuChip />, level: 'Intermediate', color: '#10B981' },
-  { name: 'Network Configuration', icon: <HiServerStack />, level: 'Intermediate', color: '#F59E0B' },
-];
-
 const categories = [
-  { label: 'Frontend', skills: frontendSkills },
-  { label: 'Backend & Tools', skills: backendSkills },
+  { label: 'IT Support & Hardware Infrastructure', skills: itSupportSkills },
+  { label: 'Networking & System Administration', skills: networkSecuritySkills },
+  { label: 'Frontend Development', skills: frontendSkills },
+  { label: 'Backend & Development Tools', skills: backendSkills },
   { label: 'UI/UX & Design', skills: designSkills },
-  { label: 'Microsoft Office', skills: officeSkills },
-  { label: 'IT Support', skills: itSkills },
+  { label: 'Microsoft Office & Productivity', skills: officeSkills },
 ];
 
 export default function Skills() {
